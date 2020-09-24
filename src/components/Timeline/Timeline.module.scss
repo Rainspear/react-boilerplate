@@ -1,0 +1,21 @@
+
+
+.Timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #474e5d;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+}

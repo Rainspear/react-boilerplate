@@ -9,6 +9,8 @@ import {
 
 } from "redux/selectors";
 import classes from './HomeBuilder.module.scss';
+// components
+import Timeline from 'components/Timeline/Timeline';
 class HomeBuilder extends Component {
 
 
@@ -20,6 +22,7 @@ class HomeBuilder extends Component {
     return (
       <div className={classes.Background}>
         <h2>Welcome to Animation Boilerplate</h2>
+        <Timeline/>
       </div>
     )
   }
