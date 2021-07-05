@@ -1,0 +1,43 @@
+@mixin buttonStyle($color: false, $backgroundColor: false, $boxShadow: false, $radius: false, $border: false, $padding : false) {
+  border: 1px solid black;
+  cursor: pointer;
+  outline: none;
+  font-size: 1rem;
+  
+  @if $padding {
+    padding: $padding;
+  } @else {
+    padding: .5rem .75rem;
+
+  }
+
+  @if $color {
+    color: $color;
+  } @else {
+    color: white;
+  }
+
+  @if ($backgroundColor) {
+    background-color: $backgroundColor;
+  } @else {
+    background-color: #027ad6;
+  }
+
+  @if ($boxShadow) {
+    box-shadow: $boxShadow;
+  } @else {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.07);
+  }
+
+  @if ($radius) {
+    border-radius: $radius;
+  } @else {
+    border-radius: 0.125rem;
+  }
+
+  @if $border {
+    border: $border;
+  } @else {
+    border: 1px solid #027ad6;
+  }
+}

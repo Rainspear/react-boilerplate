@@ -1,7 +1,17 @@
 @import '../../assets/styles/colors/global.scss';
+@import '../../assets/styles/mixins/global.scss';
 
 .Background {
   background-color: transparent;
   width: 98vw;
   height: 100vh;
+
+  // .Popup {
+  //   background-color: red
+  // }
+
+   button {
+    @include buttonStyle();
+    margin-top: 1rem;
+  }
 }
