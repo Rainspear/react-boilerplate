@@ -1,0 +1,77 @@
+.RadioBox {
+  .Container {
+    display: inline-block;
+    position: relative;
+    padding-left: 2.5rem;
+    // margin-bottom: 12px;
+    cursor: pointer;
+    font-size: .9rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    .Label {
+      font-family: Arial;
+      display: inline-block; 
+     }
+  }
+
+
+
+  /* Hide the browser's default radio button */
+  .Container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+  }
+
+  /* Create a custom radio button */
+  .Checkmark {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 0;
+    height: 1rem;
+    width: 1rem;
+    background-color: #273454;
+    border-radius: 50%;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .Container:hover input ~ .Checkmark {
+    background-color: #273454;
+  }
+
+  /* When the radio button is checked, add a blue background */
+  .Container input:checked ~ .Checkmark {
+    background-color: #2672FB;
+  }
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .Checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+  .Container input:checked ~ .Checkmark:after {
+    display: block;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .Container .Checkmark:after {
+    // top: 9px;
+    // left: 9px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background: white;
+  }
+}
